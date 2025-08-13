@@ -1,3 +1,2 @@
 [environments.development]
 store = "https://imran-test-dev.myshopify.com/"
-theme = "140255166625"
