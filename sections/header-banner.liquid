@@ -1,0 +1,48 @@
+<div class="banner" style="background:{{section.settings.background_color}}">
+<h3>
+    {{section.settings.banner_text}}
+</h3>
+</div>
+
+
+
+
+
+
+
+
+
+<style>
+    .banner > h3{
+        color: {{section.settings.text_color}};
+        text-align:center;
+    }
+</style>
+
+
+{% schema  %}
+
+{
+    "name": "Header Banner",
+    "settings": [
+        {  "type":"text",
+    "id":"banner_text",
+    "label": "Banner Text",
+    "default":"20% Off Your First Purchase"
+
+},{
+    "type": "color",
+    "id": "background_color",
+    "label": "Background Color",
+    "default":"#FDB912"
+},
+{
+    "type": "color",
+    "id": "text_color",
+    "label": "Text Color",
+    "default":"#1F1F21"
+}
+    ]
+}
+
+  {% endschema %}
