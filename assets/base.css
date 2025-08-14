@@ -277,6 +277,9 @@ body:has(.section-header .drawer-menu)
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
 }
+.utility-bar {
+  display: none;
+}
 
 h1,
 h2,
