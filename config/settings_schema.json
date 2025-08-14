@@ -44,7 +44,13 @@
             "type": "color",
             "id": "background",
             "label": "t:settings_schema.colors.settings.background.label",
-            "default": "#FFFFFF"
+            "default": "#FEF8EC"
+          },
+          {
+            "type": "color",
+            "id": "primary-color",
+            "label": "Primary Color",
+            "default": "#FEF8EC"
           },
           {
             "type": "color_background",
@@ -64,6 +70,7 @@
             "label": "Heading Color",
             "default": "#1F1F21"
           },
+
           {
             "type": "color",
             "id": "button",
@@ -117,7 +124,7 @@
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "assistant_n4",
+        "default": "alegreya_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label"
       },
       {

@@ -126,6 +126,10 @@ body:has(.section-header .drawer-menu)
   margin: 0 auto;
 }
 
+button{
+  background-color: #1F1F21 !important;
+}
+
 .utility-bar__grid.page-width {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -272,7 +276,7 @@ body:has(.section-header .drawer-menu)
 .text-body {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+ 
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
@@ -286,6 +290,12 @@ h2,
 h3,
 h4 {
   color: --var(--color-heading);
+  font-family: Alegreya;
+  margin: 0;
+}
+p {
+  font-family: inter;
+  margin: 0;
 }
 .hxxl {
   font-size: clamp(
@@ -319,67 +329,13 @@ h4 {
   }
 }
 
-h1,
-.h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
-}
+
 
 @media only screen and (min-width: 750px) {
-  h1,
-  .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
-  }
-}
 
-h2,
-.h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
-}
 
-@media only screen and (min-width: 750px) {
-  h2,
-  .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
-  }
-}
 
-h3,
-.h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
-}
 
-@media only screen and (min-width: 750px) {
-  h3,
-  .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
-  }
-}
-
-h4,
-.h4 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
-}
-
-h5,
-.h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h5,
-  .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
-  }
-}
-
-h6,
-.h6 {
-  color: rgba(var(--color-foreground), 0.75);
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
-}
 
 blockquote {
   font-style: italic;
@@ -398,7 +354,7 @@ blockquote {
 .caption {
   font-size: 1rem;
   letter-spacing: 0.07rem;
-  line-height: calc(1 + 0.7 / var(--font-body-scale));
+  
 }
 
 @media screen and (min-width: 750px) {
@@ -2628,7 +2584,7 @@ input[type="checkbox"] {
 
 .header__heading {
   margin: 0;
-  line-height: 0;
+  
 }
 
 .header > .header__heading-link {
@@ -2653,7 +2609,7 @@ input[type="checkbox"] {
 }
 
 .header__heading-link .h2 {
-  line-height: 1;
+ 
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -2885,7 +2841,7 @@ details[open] .modal-overlay::after {
   width: 100%;
   height: 100%;
   padding: 0 5rem 0 1rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+ 
   position: relative;
 }
 

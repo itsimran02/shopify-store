@@ -100,6 +100,8 @@
       }
 
       :root {
+        --heading-color:{{settings.heading_color}};
+        --color-primary:{{settings.primary_color}};
         --font-body-family: {{ settings.type_main_font.family}}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -242,7 +244,8 @@
         margin: 0;
         font-size: 1.5rem;
         letter-spacing: 0.06rem;
-        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        overflow-x:clip;
+   
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
@@ -298,7 +301,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}" style="{font-family:var(--font-body-family)} {background-color:#FEF8EC}">
   
     {% section 'header-banner' %}
 
@@ -307,6 +310,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {% section  'hero'%}
       {{ content_for_layout }}
     </main>
 

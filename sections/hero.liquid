@@ -1,0 +1,232 @@
+<section class="page-width ">
+  <div class="">
+    <div class="hero-container">
+      <div class="left">
+        <div>
+          <div class="star-wrapper">
+            <div class="stars">
+              <img src="{{'star.svg' | asset_url }}" alt="star-icon" width="16px" height="16px">
+              <img src="{{'star.svg' | asset_url }}" alt="star-icon" width="16px" height="16px">
+              <img src="{{'star.svg' | asset_url }}" alt="star-icon" width="16px" height="16px">
+              <img src="{{'star.svg' | asset_url }}" alt="star-icon" width="16px" height="16px">
+              <img src="{{'star.svg' | asset_url }}" alt="star-icon" width="16px" height="16px">
+            </div>
+            <p>LOVED BY 100,000 HAPPY CUSTOMERS</p>
+          </div>
+
+          <h1>{{section.settings.hero_heading}}</h1>
+
+          <p class="hero-description">
+           {{section.settings.hero_description}}
+          </p>
+          <div class="cta">
+            <button class="hero-button">{{section.settings.hero_button}}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+       
+          <img src="{{'offerbadgedesk.png' |  asset_url}} " height="126" width="127"  class="badge-desk">
+          {% if section.settings.hero_image != blank %}
+            <img 
+              src="{{ section.settings.hero_image | image_url }}" 
+              height="100%" 
+              width="100%" 
+       
+              alt="Hero Image">
+          {% else %}
+            <img 
+              src="{{ 'hero-image.png' | asset_url }}" 
+              height="100%" 
+              width="100%" 
+             
+              alt="Default Badge">
+          {% endif %}
+          
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta {
+    margin-top: 48px;
+  }
+  .hero-description {
+    color: #4c4c4d;
+  }
+  .right {
+    flex: 1.1;
+    position: relative;
+  }
+ 
+  .right >  .badge-desk {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+  }
+
+  .left {
+    flex: 1;
+  }
+  .left h1>{
+    line-height: 54px;
+    font-size: 54px;
+    font-weight: bold;
+  }
+  .hero-button {
+    font-size: 24px;
+    border: none;
+    padding-block: 18px;
+    padding-inline: 36px;
+    background-color: var(--heading-color);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .hero-button:hover {
+    background-color: #3b3b3e;
+  }
+  h1 {
+    font-size: 54px;
+    color: var(--primary-button);
+  }
+  .left > p {
+    font-size: 18px;
+    font-weight: normal;
+  }
+ 
+  .star-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .star-wrapper > p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-button);
+  }
+  .stars {
+    display: flex;
+    gap: 4px;
+  }
+ 
+
+  .welcome-description {
+ 
+    line-height: 1.4;
+    margin-top: 1.5rem;
+  }
+
+  .icon {
+    width: 300px;
+  }
+
+  @media (max-width: 1100px) {
+    .highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .highlight {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #eef3ff;
+    color: rgb(92, 95, 98);
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .hero-container {
+      flex-direction: column-reverse;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .left > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .left > div > h1 {
+      text-align: center;
+      font-size: 38px;
+    }
+    .cta {
+      font-size: 24px;
+      margin-top: 24px;
+    }
+    .hero-description {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .right .badge-desk{
+        height: 86px;
+        width: 86px;
+    }
+    .star-wrapper {
+      flex-direction: column;
+      gap: 5px;
+    }
+    .welcome {
+      padding-block: 32px;
+    }
+  }
+{% endstylesheet %}
+
+
+
+
+
+
+
+
+{%schema %}
+
+{
+    "name": "Hero Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "hero_heading",
+            "default":"Goodbye hangovers! Reclaim your weekends",
+            "label": "Primary Heading"
+        } ,
+        {
+            "type": "text",
+            "id": "hero_description",
+"label": "Hero Description",
+            "default":"Tipple Hangover Defence is designed for health-conscious individuals who value their productivity and wellness."
+        }
+        ,{
+        "type": "text",
+            "id": "hero_button",
+            "default":"UNLOCK 20% OFF NOW",
+            "label": "Hero Button Text"
+        },
+        {
+            "type": "image_picker",
+     "id": "hero_image",
+     "label": "Hero Image"
+        }
+        
+    
+    
+    ]
+}
+
+{%endschema%}

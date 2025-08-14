@@ -1,7 +1,7 @@
 <div class="header-banner" style="background:{{section.settings.background_color}} ">
-<h3>
+<p>
     {{section.settings.banner_text}}
-</h3>
+</p>
 </div>
 
 
@@ -9,11 +9,14 @@
 <style>
     .header-banner{
         padding-block: 10px;
+       
     }
-    .header-banner > h3{
+    .header-banner > p{
         color: {{section.settings.text_color}};
         text-align:center;
         margin:0;
+        font-size:18px;
+        font-weight:bold
     }
 </style>
 
